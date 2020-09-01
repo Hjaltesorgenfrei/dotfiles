@@ -61,3 +61,5 @@ let g:neoformat_basic_format_retab = 1
 autocmd BufWritePost *.cpp :TlistUpdate
 autocmd BufWritePost *.c :TlistUpdate
 autocmd BufWritePost *.h :TlistUpdate
+
+let Tlist_GainFocus_On_ToggleOpen = 1
