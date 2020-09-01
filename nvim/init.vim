@@ -29,9 +29,9 @@ set hidden
 
 set t_Co=256
 
-let Tlist_WinWidth = 10
-nmap <F7>  :TrinityToggleTagList<CR>
-nmap <F12>  :TrinityToggleNERDTree<CR>
+let Tlist_WinWidth = 40
+nmap <F7>  :TlistToggle<CR>
+nmap <F12> :NERDTreeToggle<CR>
 
 call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -44,6 +44,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'sheerun/vim-polyglot'
 	Plug 'phanviet/vim-monokai-pro'
 	Plug 'scrooloose/nerdtree'
+	Plug 'yegappan/taglist'
 call plug#end()
 
 colorscheme monokai_pro
@@ -56,3 +57,7 @@ let g:airline_theme='base16_monokai'
 let g:neoformat_basic_format_align = 1
 let g:neoformat_basic_format_trim = 1
 let g:neoformat_basic_format_retab = 1
+
+autocmd BufWritePost *.cpp :TlistUpdate
+autocmd BufWritePost *.c :TlistUpdate
+autocmd BufWritePost *.h :TlistUpdate
