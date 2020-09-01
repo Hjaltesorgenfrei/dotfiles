@@ -48,6 +48,8 @@ call plug#end()
 
 colorscheme monokai_pro
 
+hi Visual ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#7A757C gui=NONE
+
 let g:deoplete#enable_at_startup = 1
 let g:airline_theme='base16_monokai'
 
